@@ -86,14 +86,14 @@ public class AnimatorStateBehaviour : StateMachineBehaviour
 	#endregion
 
 	#region UnityFollow
-	void OnExitInternal(Animator animator, AnimatorStateInfo currentStateInfo, AnimatorStateInfo nextStateInfo, int layerIndex, bool isInterrupted)
+	private void OnExitInternal(Animator animator, AnimatorStateInfo currentStateInfo, AnimatorStateInfo nextStateInfo, int layerIndex, bool isInterrupted)
 	{
 		if (!isRunning)
 		{
 			return;
 		}
 
-		if (mustTrigger && isCurrLoopTriggered == false)
+		if (mustTrigger && !isCurrLoopTriggered)
 		{
 			isEnterMustTrigger = true;
 			OnTrigger(animator, currentStateInfo, layerIndex);
