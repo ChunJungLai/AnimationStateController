@@ -2,6 +2,7 @@
 using UnityEditor;
 using UnityEditor.Animations;
 using UnityEngine.Animations;
+using System;
 
 public class AnimatorStateEventBehaviourCopier
 {
