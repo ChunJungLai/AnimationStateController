@@ -2,5 +2,6 @@
 
 public class AnimatorStateAttribute : PropertyAttribute
 {
-	public int selected;
+    public int selected;
+    public GameObject character;
 }
